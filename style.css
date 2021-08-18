@@ -17,11 +17,12 @@ body {
 .todo {
     display: flex;
     width: 42vw;
+    height: 420px;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
     margin-top: 50px;
-    gap: 15px;
+    gap: 25px;
     background-color: #fad2e1;
     box-shadow: 1px 1px 5px #adb5bd;
 }
@@ -36,5 +37,35 @@ body {
     margin-top: 50px;
     box-shadow: 1px 1px 5px #adb5bd;
     font-size: 2.6rem;
+    color: #333;
+}
+
+.todo_list {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.todo_item {
+    display: flex;
+    width: 80%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff1e6;
+}
+
+.todo_item > div {
+    width: 80%;
+    
+}
+
+.todo_item:hover {
+    cursor: pointer;
+    transition: all .5s ease;
+    background-color: #fad2e1;
     color: #333;
 }
