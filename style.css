@@ -22,7 +22,7 @@ body {
     align-items: center;
     margin: 0 auto;
     margin-top: 50px;
-    gap: 25px;
+    gap: 30px;
     background-color: #fad2e1;
     box-shadow: 1px 1px 5px #adb5bd;
 }
@@ -69,4 +69,32 @@ body {
     transition: all .5s ease;
     background-color: #fad2e1;
     color: #333;
+}
+
+.todo_item > input[type='text'] {
+    border: none;
+    width: 80%;
+    font: inherit;
+}
+
+.todo_item > input[type='button'],
+.todo_item > input[type='checkbox'] {
+    width: 20px;
+    height: 22px;
+}
+
+.todo_item > input [type='checkbox']:checked + div {
+    text-decoration: line-through;
+}
+
+.todo_new-item {
+    display: flex;
+    background-color: #fff1e6;
+    box-shadow: 1px 1px 5px #adb5db;
+    width: 70%;
+    height 70px;
+    justify-content: space-evenly;
+    padding: 5px 0;
+    margin: 18px;
+    font: inherit;
 }
