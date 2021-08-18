@@ -98,3 +98,12 @@ body {
     margin: 18px;
     font: inherit;
 }
+
+.todo_new-item > input {
+    background-color: #fff;
+    border: none;
+    box-shadow: 1px 1px 5px #fad2e1;
+    width: 75%;
+    outline: none;
+    font: bold 2.2rem 'Mukta', sans-serif;
+}
