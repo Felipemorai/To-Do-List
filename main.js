@@ -7,7 +7,7 @@
 </label>
  */
 
-const criateItem = () => {
+const createItem = () => {
     const item = document.createElement('label')
     item.classList.add('todo_item');
     item.innerHTML = `
