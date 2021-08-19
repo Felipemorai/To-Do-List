@@ -85,6 +85,7 @@ body {
 
 .todo_item > input [type='checkbox']:checked + div {
     text-decoration: line-through;
+    display: inline-block;
 }
 
 .todo_new-item {
