@@ -17,7 +17,7 @@ body {
 .todo {
     display: flex;
     width: 42vw;
-    height: 420px;
+    height: 450px;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
@@ -80,10 +80,10 @@ body {
 .todo_item > input[type='button'],
 .todo_item > input[type='checkbox'] {
     width: 20px;
-    height: 22px;
+    height: 20px;
 }
 
-.todo_item > input [type='checkbox']:checked + div {
+.todo_item > input[type='checkbox']:checked + div {
     text-decoration: line-through;
 }
 
@@ -95,7 +95,7 @@ body {
     height 70px;
     justify-content: space-evenly;
     padding: 5px 0;
-    margin: 18px;
+    margin: 10px;
     font: inherit;
 }
 
