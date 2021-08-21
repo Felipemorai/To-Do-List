@@ -17,7 +17,7 @@ const createItem = (text, status='') => {
 }
 
 const updateScreen = () => {
-    createItem ('test1');
+    bank.forEach (item => createItem (item.task));
 }
 
 updateScreen();
