@@ -15,3 +15,9 @@ const createItem = (text, status='') => {
     `;
     document.getElementById('todoList').appendChild(item);
 }
+
+const updateScreen = () => {
+    createItem ('test1');
+}
+
+updateScreen();
