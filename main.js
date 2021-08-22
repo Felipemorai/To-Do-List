@@ -31,7 +31,11 @@ const updateScreen = () => {
 
 const insertItem = (event) => {
     const key = event.key;
-    console.log (key);
+    const text = event.target.value; 
+    if (key === 'Enter'){
+        bank.push ({'task': text, 'status': ''})
+        updateScreen();
+    }
 }
 
 document.getElementById('newItem').addEventListener('keypress', insertItem);
