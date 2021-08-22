@@ -29,4 +29,11 @@ const updateScreen = () => {
     bank.forEach (item => createItem (item.task, item.status));
 }
 
+const insertItem = (event) => {
+    const key = event.key;
+    console.log (key);
+}
+
+document.getElementById('newItem').addEventListener('keypress', insertItem);
+
 updateScreen();
