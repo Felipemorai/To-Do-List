@@ -6,7 +6,7 @@ let bank = [
     {'task': 'make the lunch', 'status': ''},
 ];
 
-const createItem = (task, status) => {
+const createItem = (task, status, indice) => {
     const item = document.createElement('label')
     item.classList.add('todo_item');
     item.innerHTML = `
@@ -26,7 +26,7 @@ const cleanTask = () => {
 
 const updateScreen = () => {
     cleanTask ()
-    bank.forEach (item => createItem (item.task, item.status));
+    bank.forEach ( (item, indice) => createItem (item.task, item.status, indice));
 }
 
 const insertItem = (event) => {
@@ -35,9 +35,16 @@ const insertItem = (event) => {
     if (key === 'Enter'){
         bank.push ({'task': text, 'status': ''})
         updateScreen();
+        event.target.value = '';
     }
 }
 
+const clickItem = (event) => {
+    const element = event.target;
+    console.log (element);
+}
+
 document.getElementById('newItem').addEventListener('keypress', insertItem);
+document.getElementById('todoList').addEventListener('click', clickItem);
 
 updateScreen();
