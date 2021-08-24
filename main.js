@@ -10,9 +10,9 @@ const createItem = (task, status, indice) => {
     const item = document.createElement('label')
     item.classList.add('todo_item');
     item.innerHTML = `
-         <input type="checkbox" ${status}>
+         <input type="checkbox" ${status} data-indice=${indice}>
          <div>${task}</div>
-         <input type="button" value="X">
+         <input type="button" value="X" data-indice=${indice}>
     `;
     document.getElementById('todoList').appendChild(item);
 }
@@ -39,9 +39,18 @@ const insertItem = (event) => {
     }
 }
 
+const removeItem = (indice) => {
+    bank.splice (indice, 1);
+    updateScreen();
+}
+
 const clickItem = (event) => {
     const element = event.target;
     console.log (element);
+    if (element.type === 'button') {
+        const indice = element.dataset.indice;
+        removeItem(indice);
+    }
 }
 
 document.getElementById('newItem').addEventListener('keypress', insertItem);
