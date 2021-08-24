@@ -44,12 +44,21 @@ const removeItem = (indice) => {
     updateScreen();
 }
 
+const updateItem = (indice) => {
+    bank[indice].status = bank[indice].status === '' ? 'checked' : '';
+    updateScreen();
+}
+
 const clickItem = (event) => {
     const element = event.target;
     console.log (element);
     if (element.type === 'button') {
         const indice = element.dataset.indice;
-        removeItem(indice);
+        removeItem (indice);
+    }else
+    if (element.type === 'checkbox') {
+        const indice = element.dataset.indice;
+        updateItem (indice);
     }
 }
 
